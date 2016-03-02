@@ -1,8 +1,9 @@
 # NodemailerMassSend
 
 ##Install NodeJS 0.12.4
-Linux / MAC
+Linux / Mac
 https://github.com/creationix/nvm
+
 Windows
 https://nodejs.org/download/release/v0.12.4/
 
