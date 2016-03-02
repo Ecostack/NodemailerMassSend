@@ -1,0 +1,15 @@
+{
+  "email": {
+    "from": "<EMAIL FROM>",
+    "method": "SMTP",
+    "settings": {
+      "host": "",
+      "secureConnection": true,
+      "port": 465,
+      "auth": {
+        "user": "",
+        "pass": ""
+      }
+    }
+  }
+}

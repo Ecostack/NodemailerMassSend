@@ -1,0 +1,16 @@
+{
+  "name": "rabo_issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "bluebird": "^3.3.3",
+    "nodemailer": "^0.7.1"
+  }
+}
