@@ -1,13 +1,13 @@
 'use strict';
 
-const bluebird = require('bluebird');
-const async = require('async');
-const fs = require('fs');
+var bluebird = require('bluebird');
+var async = require('async');
+var fs = require('fs');
 
 
-const EmailService = require('./app/EmailService');
+var EmailService = require('./app/EmailService');
 
-let emails = fs.readFileSync('emails.txt', "UTF-8").split("\n");
+var emails = fs.readFileSync('emails.txt', "UTF-8").split("\n");
 
 async.eachSeries(emails, function (email, callback) {
     EmailService.sendToMail(email, function (err) {

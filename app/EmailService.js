@@ -3,13 +3,13 @@
 var nodemailer = require('nodemailer');
 // create a defaultTransport using gmail and authentication that are
 // stored in the `config.js` file.
-const config = require('../config.json');
+var config = require('../config.json');
 
 var defaultTransport = nodemailer.createTransport(config.email.method, config.email.settings);
 
 
 module.exports = {
-    sendToMail: (mailaddress,cb) => {
+    sendToMail: function(mailaddress,cb)  {
         var options = {
             to: mailaddress,
             replyTo: config.from,
@@ -20,10 +20,10 @@ module.exports = {
 
         module.exports.send(options, cb);
     },
-    send: (options, cb) => {
+    send:function  (options, cb) {
 
-        let html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' + options.html;
-        let emailOptions = {
+        var html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' + options.html;
+        var emailOptions = {
             from: options.from,
             to: options.to,
             subject: options.subject,
